@@ -1,21 +1,21 @@
 # proxyrc
 
-A proxy configuration file that solves the purpose of switching the proxies while travelling to KGP (proxy) and Home (without proxy), with a *SINGLE COMMAND*.
+A proxy configuration file that solves the purpose of switching the proxies while travelling to KGP (proxy) and Home (without proxy), with a **SINGLE COMMAND**.
 
 ### What all does it do?
 
 1. Set `http_proxy` and `https_proxy` variables
-2. Set `git config --global` http.proxy and https.proxy variables
+2. Set `git config --global` `http.proxy` and `https.proxy` variables
 3. Change `~/.ssh/config` to include Corkscrew
 
 ### Setup
 
-1. Be sure to setup your `~/.ssh/config.kgp` and `~/.ssh/config.home` files with the same names (`config.kgp` and `config.home`). For example, my files look like [config.home](ssh:config.home) and [config.kgp](ssh:config.kgp).
+1. Be sure to setup your `~/.ssh/config.kgp` and `~/.ssh/config.home` files with the same names (`config.kgp` and `config.home`). For example, my files look like [ssh_config_home](ssh_config_home) and [ssh_config_kgp](ssh_config_kgp).
 
-2. No need to clone the entire repository. Just get the `proxy.sh` file by -
+2. No need to clone the entire repository. Just get the `proxy.sh` file by typing this in your terminal -
 
-```sh
-curl -o ~/.proxyrc https://raw.githubusercontent.com/athityakumar/proxyrc/master/proxy.sh
+```console
+$ curl -o ~/.proxyrc https://raw.githubusercontent.com/athityakumar/proxyrc/master/proxy.sh
 ```
 
 3. Add this to your shell configuration file (`~/.bashrc`, `.zshrc` or `.fishrc`) -
@@ -28,19 +28,19 @@ proxy() { sh ~/.proxyrc $1; }
 
 1. Switch to KGP environment -
 
-```sh
+```console
 $ proxy kgp
 Switching to KGP Proxy setting, http://172.16.2.30:8080/
 ```
 
 2. Switch to home envrionment (default) -
 
-```sh
+```console
 $ proxy
 Home, sweet home! No proxy settings.
 ```
 
-```sh
+```console
 $ proxy home
 Home, sweet home! No proxy settings.
 ```
