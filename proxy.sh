@@ -10,6 +10,8 @@ if [ $1 = 'kgp' ]; then
 
   mv ~/.ssh/config ~/.ssh/config.backup
   cp ~/.ssh/config.kgp ~/.ssh/config
+
+  echo "Switching to KGP Proxy setting", $proxy
 else
   unset http_proxy
   unset https_proxy
@@ -18,4 +20,6 @@ else
 
   mv ~/.ssh/config ~/.ssh/config.backup
   cp ~/.ssh/config.home ~/.ssh/config
+
+  echo "Home, sweet home! No proxy settings."
 fi
