@@ -1,0 +1,4 @@
+Host github.com
+  Hostname ssh.github.com
+  ProxyCommand corkscrew 172.16.2.30 8080 %h %p
+  Port 443
