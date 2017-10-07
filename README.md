@@ -14,14 +14,19 @@ A proxy configuration file that solves the purpose of switching the proxies whil
 
 2. No need to clone the entire repository. Just get the `proxy.sh` file by typing this in your terminal -
 
-```console
+ ```console
 $ curl -o ~/.proxyrc https://raw.githubusercontent.com/athityakumar/proxyrc/master/proxy.sh
 ```
 
-3. Add this to your shell configuration file (`~/.bashrc`, `.zshrc` or `.fishrc`) -
+3. Add this to your shell configuration file (`~/.bashrc`, `.zshrc`) -
 
-```sh
+ ```sh
 proxy() { sh ~/.proxyrc $1; }
+```
+
+ If you use fish, you can get the function `proxy.fish` file by a simple curl command:
+ ```console
+$ curl -o ~/.config/fish/functions/proxy.fish https://raw.githubusercontent.com/athityakumar/proxyrc/master/proxy.fish
 ```
 
 ### Usage
