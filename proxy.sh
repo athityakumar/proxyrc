@@ -16,8 +16,8 @@ if [ -z "$1" ] || [ $1 != 'kgp' ] ; then
 
   git_installed=$(check_install git)
   if [ $git_installed -ne 0 ]; then
-    git config --unset http.proxy
-    git config --unset https.proxy
+    git config --global --unset http.proxy
+    git config --global --unset https.proxy
   fi
 
   npm_installed=$(check_install npm)
