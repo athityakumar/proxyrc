@@ -2,3 +2,8 @@ Host github.com
   Hostname ssh.github.com
   ProxyCommand corkscrew 172.16.2.30 8080 %h %p
   Port 443
+
+Host gitlab.com
+  Hostname altssh.gitlab.com
+  ProxyCommand corkscrew 172.16.2.30 8080 %h %p
+  Port 443
